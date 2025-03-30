@@ -33,3 +33,7 @@ This is a script to automate connecting to the NYU Cisco VPN server.
    ```bash
    ./cisco_connect.exp
    ```
+
+## TODO (If I'm bored and I want to make this more accessible)
+
+[] Make GUI

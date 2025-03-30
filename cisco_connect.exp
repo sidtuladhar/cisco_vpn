@@ -2,8 +2,9 @@
 
 set VPN_SERVER "vpn.shanghai.nyu.edu"
 set CLI_PATH "/opt/cisco/secureclient/bin/vpn"
-set USERNAME "your_netid" # Replace with your netid
-set PASSWORD "your_password" # Replace with your VPN password
+set USERNAME "your_netid"
+set PASSWORD "your_password"
+set timeout 30
 
 spawn $CLI_PATH -s connect $VPN_SERVER
 
