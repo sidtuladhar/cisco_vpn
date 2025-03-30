@@ -1,0 +1,39 @@
+#!/usr/bin/expect -f
+
+set VPN_SERVER "vpn.shanghai.nyu.edu"
+set CLI_PATH "/opt/cisco/secureclient/bin/vpn"
+set USERNAME "your_netid" # Replace with your netid
+set PASSWORD "your_password" # Replace with your VPN password
+
+spawn $CLI_PATH -s connect $VPN_SERVER
+
+expect {
+  "Username: \\\[$USERNAME\\\] " {
+    send "\r"
+    exp_continue
+  }
+  "Username:" {
+    send "$USERNAME\r"
+    exp_continue
+  }
+  "Second Password: " {
+    send "push\r"
+    exp_continue
+  }
+  "Password: " {
+   send "$PASSWORD\r"
+   exp_continue
+  }
+  "accept\\? \\\[y/n\\\]: " {
+    send "y\r"
+    exp_continue
+  }
+  "state: Connected" {
+    puts "\nVPN connected!"
+    exit 0
+  }
+  timeout {
+    puts "\n❌ Timed out. Check your push notification."
+    exit 1
+  }
+}
