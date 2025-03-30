@@ -14,7 +14,7 @@ This is an Expect script to automate connecting to a VPN server.
 
    ```bash
    git clone https://github.com/sidtuladhar/cisco_vpn.git
-   cd vpn-connect-script
+   cd cisco_vpn
    ```
 
 2. Open the script (`cisco_connect.exp`) in a text editor and replace:
@@ -25,7 +25,7 @@ This is an Expect script to automate connecting to a VPN server.
 3. Make the script executable:
 
    ```bash
-   chmod +x connect_vpn.exp
+   chmod +x cisco_connect.exp
    ```
 
 4. Run the script every time you want to connect to the VPN
