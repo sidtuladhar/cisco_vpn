@@ -1,6 +1,6 @@
 # VPN Connection Script
 
-This is an Expect script to automate connecting to a VPN server.
+This is a script to automate connecting to the NYU Cisco VPN server.
 
 ## Prerequisites
 
